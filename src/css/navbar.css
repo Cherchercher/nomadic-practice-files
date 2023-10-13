@@ -1,0 +1,27 @@
+.navItem {
+    display: inline-block;
+    color: white;
+    padding: auto;
+    margin: 0 auto;
+    vertical-align: bottom;
+    line-height: normal;
+    /* vertical-align: middle;
+    line-height: normal; this does not work. Why*/
+    /* display: table-cell; does not work. Why*/
+
+    /* display: table-cell;
+    vertical-align: middle; */
+    /* display: table-cell; does not work. Why but works in conjuction of vertical-align: middle */
+    line-height: 36px;
+    
+}
+
+#navContainer {
+    /* display: table; */
+    width: 100%;
+    height: 36px;
+    position: fixed;
+    background-color: black;
+    /* text-align: center; */
+    /* vertical-align: center; what does this do*/
+}

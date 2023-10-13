@@ -1,0 +1,31 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+#box-one {
+    background-color: blue;
+    border: 20px solid black;
+}
+
+#box-two {
+    background-color: red;
+    border: 20px dashed yellow;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#padding-demo {
+    background-color: orange;
+    border: 10px solid green;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    /* width: 90px; 
+    height: 90px; challenge to make box appears same size as above*/ 
+}
+
+#size-demo {
+   width: 170px;
+}
