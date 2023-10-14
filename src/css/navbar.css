@@ -5,6 +5,7 @@
     margin: 0 auto;
     vertical-align: bottom;
     line-height: normal;
+    width: 33%;
     /* vertical-align: middle;
     line-height: normal; this does not work. Why*/
     /* display: table-cell; does not work. Why*/
@@ -21,7 +22,13 @@
     width: 100%;
     height: 36px;
     position: fixed;
+    position: sticky;
+    top: 0;
     background-color: black;
-    /* text-align: center; */
+    text-align: center;
     /* vertical-align: center; what does this do*/
+}
+
+#overflowContent {
+    height: 3000px;
 }
