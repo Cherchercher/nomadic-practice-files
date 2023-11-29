@@ -21,6 +21,7 @@
     line-height: 5px;
     top: 0;
     right: 0;
+    /* why vertical align doesn't work */
     text-align: center;
 }
 

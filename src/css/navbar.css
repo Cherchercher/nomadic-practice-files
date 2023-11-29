@@ -1,10 +1,10 @@
 .navItem {
     display: inline-block;
     color: white;
-    padding: auto;
-    margin: 0 auto;
-    vertical-align: bottom;
-    line-height: normal;
+    /* padding: auto; */
+    /* margin: 0 auto; */
+    /* vertical-align: bottom; */
+    /* line-height: normal; */
     width: 33%;
     /* vertical-align: middle;
     line-height: normal; this does not work. Why*/
