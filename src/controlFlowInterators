@@ -1,0 +1,94 @@
+
+// The for loop is best used when iterating through an array where the length is known, giving us explicit control over the loop initialtion, condition, and iteration.
+let numbers = [];
+for (let i = 0; i < 201; i++) {
+    numbers.push(i);
+}
+
+function processNumber(numbersToProcess) {
+    prev = -1
+    for (let number of numbersToProcess) {
+        if (number == 100) {
+            print("halfway")
+            continue
+        }
+        if (number % 2 == 0) {
+            print(i);
+        } 
+        if (number != prev + 1) {
+            throw Error;
+        }
+        prev += 1
+    }
+}
+
+
+
+// We cover all the logics, but the number != prev + 1 condition won't ever be true for our number array.
+// Let's alter the numbers array so that it will hit.
+
+numbers[3] = 55
+
+// In the control flow example, we had to alter the input to ensure that non continneous array triggers an error.
+// Running the program one-off to ensure the condition is hit maybe ok for a simple program with only one or a few contributors.
+
+// As a program expands in scale and involves more developers, functions may undergo alterations and potentially deviate from their intended behaviors. To ensure the continued correctness and reliability of software functions throughout the evolution of the program and the involvement of different programmers, we employ unit tests to systematically check for logical errors and maintain the integrity of the codebase.
+
+// Typically, we cover each of the conditions, as well as edge cases where the function may misbhave in rare scenerios.
+// A better way to test is write unit tests. For unit tests, we can use the assert statement, where the left is equal to the right
+
+
+
+
+//There are other loops we can use, given different scenarios and/or user preference.
+
+// Let's illustrate the advantages of each loop construct with examples:
+
+// 1. While loop.
+// Example: Suppose you want to find the first Fibonacci number greater than 1000.
+// javascript
+// Copy code
+let fib1 = 0;
+let fib2 = 1;
+let nextFib;
+while (nextFib <= 1000) {
+    nextFib = fib1 + fib2;
+    fib1 = fib2;
+    fib2 = nextFib;
+}
+// console.log("First Fibonacci number greater than 1000:", nextFib); // Output: First Fibonacci number greater than 1000: 1597
+// Advantages:
+// Flexibility: The while loop allows us to iterate until a specific condition (nextFib <= 1000) is met, making it suitable for situations where the number of iterations is not known beforehand.
+// 2. Do-While Loop:
+
+// Example: Suppose you want to prompt the user to enter a positive number until they do so.
+// javascript
+// Copy code
+let userInput;
+do {
+    userInput = parseInt(prompt("Enter a positive number:"));
+} while (isNaN(userInput) || userInput <= 0);
+console.log("User entered:", userInput);
+// Advantages:
+// Always Executes at Least Once: The do-while loop ensures that the prompt is shown at least once, allowing the user to enter a number before checking the loop condition.
+// 3. ForEach Loop:
+
+// Example: Suppose you want to print the squares of numbers in an array.
+// javascript
+// Copy code
+let numbersToSquare = [1, 2, 3, 4, 5];
+numbersToSquare.forEach(num => {
+    console.log(num * num);
+});
+// Output:
+// 1
+// 4
+// 9
+// 16
+// 25
+// Advantages:
+// Elegant Syntax for Iterating Arrays: Without the need to specify items' indices, this consise syntax is only available for arrays. It's especially useful for applying functions or side effects to each element of an array.
+
+
+// for...of: Use for...of when you need to iterate over the values of an iterable object and don't require access to indices.
+// forEach(): Use forEach() when you're specifically working with arrays and want to perform a callback operation on each array element. this is more advanced topic) 
