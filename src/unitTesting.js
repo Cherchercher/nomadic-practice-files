@@ -22,8 +22,13 @@ function processNumber(numbersToProcess) {
     }
 }
 
+assert(processNumber(numbers)) {
+
+}
 
 numbers[3] = 55
+
+
 
 // In the control flow example, we had to alter the input to ensure that non continneous array triggers an error.
 // Running the program one-off to ensure the condition is hit maybe ok for a simple program with only one or a few contributors.

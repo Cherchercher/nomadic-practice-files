@@ -51,8 +51,7 @@ const factorial = function calculateFactorial(n) {
   } else {
     return n * calculateFactorial(n - 1);
   }
-};
-
+}
 
 
 //expressions and statements
