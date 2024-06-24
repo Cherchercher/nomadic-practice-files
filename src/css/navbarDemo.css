@@ -1,0 +1,20 @@
+.navItem {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    width: 33%;
+    line-height: 36px;
+}
+
+#navContainer {
+    width: 100%;
+    height: 36px;
+    position: fixed;
+    top: 0;
+    background-color: black;
+    text-align: center;
+}
+
+#overflowContent {
+    height: 3000px;
+}

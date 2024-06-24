@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Handling Example</title>
+<style>
+  #box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: 50px auto;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    cursor: pointer;
+  }
+
+  #box:hover {
+    background-color: red;
+  }
+</style>
+</head>
+<body>
+
+<div id="box">Hover Over Me</div>
+
+<script>
+  // Scroll event
+  window.addEventListener('scroll', function() {
+    console.log('Scroll event detected');
+  });
+
+  // Hover event
+  document.getElementById('box').addEventListener('mouseover', function() {
+    console.log('Hover event detected');
+  });
+
+  // Click event
+  document.getElementById('box').addEventListener('click', function() {
+    console.log('Click event detected');
+  });
+
+  // onFocus event
+  document.getElementById('box').addEventListener('focus', function() {
+    console.log('onFocus event detected');
+  });
+
+  // Simulating onFocus event by clicking on the box to focus it
+  document.getElementById('box').addEventListener('click', function() {
+    this.focus();
+  });
+
+//   <!-- Certainly, misusing or misunderstanding the concepts of "ready" and "loaded" can lead to various issues in web development. Here are a few examples:
+
+// Relying on load event for DOM manipulation:
+
+window.onload = function() {
+    // Attempting to manipulate DOM elements
+    document.getElementById('someElement').innerHTML = 'Loaded!';
+};
+
+
+// <!-- Issue: This code waits until all external resources (including images and scripts) are fully loaded before manipulating the DOM. While this ensures that all resources are available, it can lead to a slower perceived performance for users, as they have to wait longer for the DOM manipulation to occur. It's better to use the DOMContentLoaded event for DOM manipulation, as it fires earlier, allowing for faster rendering of content.
+// Using DOMContentLoaded instead of load for resource-dependent tasks:
+// javascript -->
+document.addEventListener('DOMContentLoaded', function() {
+    // Initializing a third-party library that relies on images being fully loaded
+    initializeThirdPartyLibrary();
+});
+</script>
+
+</body>
+</html>

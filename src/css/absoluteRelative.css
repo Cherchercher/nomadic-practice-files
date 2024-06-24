@@ -1,0 +1,66 @@
+.orange-square span {
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    background: white;
+    font-size: 10px;
+    color: black;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    line-height: 20px;
+}
+
+.green-square span {
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    background: red;
+    color: white;
+    font-size: 5px;
+    line-height: 5px;
+    top: 0;
+    right: 0;
+    /* why vertical align doesn't work */
+    text-align: center;
+}
+
+.orange-square {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    margin: 1px;
+    width: 50px;
+    height: 50px;
+    background-color: #DFA612;
+}
+
+.grid {
+    margin: 50px;
+    padding: 5px;
+    max-width: 260px;
+    font-size: 0px;
+    position:relative;
+    background-color: #000;
+}
+
+.black-square {
+    display: inline-block;
+    margin: 1px;
+    width: 50px;
+    height: 50px;
+    background-color: #444;
+}
+
+.green-square {
+    z-index: 1;
+    position: relative;
+    top: 25px;
+    left: 25px;
+    display: inline-block;
+    margin: 1px;
+    width: 50px;
+    height: 50px;
+    background-color: #6db65b;
+}

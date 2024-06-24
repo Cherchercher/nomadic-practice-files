@@ -1,0 +1,24 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    /* display: block; */
+    display: inline;
+    /* vertical-align: middle; */
+}
+
+#box-one {
+    background-color: blue;
+    border: 20px solid black;
+}
+
+#box-two {
+    background-color: red;
+    border: 20px dashed yellow;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#size-demo {
+    width: 500px;
+}

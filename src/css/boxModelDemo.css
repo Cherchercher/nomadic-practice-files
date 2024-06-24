@@ -1,0 +1,28 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin-bottom: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#boxOne {
+  border: 20px solid black;
+}
+
+#boxTwo {
+  color: red;
+display: none;
+}
+
+#paddingDemo {
+    border: 10px solid orange;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: wrap;
+}
+
+#inline-displaced {
+  width: 100px;
+}

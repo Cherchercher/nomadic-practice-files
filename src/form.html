@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form id="form" onsubmit="return validate(event);">
+        <div class="field">
+            <label for="user_name">user_name</label>
+            <input type="text" name="user_name" id="user_name">
+        </div>
+        <div class="field">
+            <label for="topic">topic</label>
+            <input type="text" name="topic" id="topic">
+        </div>
+        <div class="field">
+            <label for="message">message</label>
+            <input type="text" name="message" id="message">
+        </div>
+        <div class="field">
+            <label for="user_email">user_email</label>
+            <input type="text" name="user_email" id="user_email">
+        </div>
+        <div class="field">
+            <label for="from_name">from_name</label>
+            <input type="text" name="from_name" id="from_name">
+        </div>
+        <div class="field">
+            <label for="reply_to">reply_to</label>
+            <input type="text" name="reply_to" id="reply_to">
+        </div>
+    
+        <input type="submit" id="button" value="Send Email">
+    </form>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <script type="text/javascript">
+        emailjs.init('jv36V8efWAPk34RgC');
+
+        function validate(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            const btn = document.getElementById('button');
+            const serviceID = 'default_service';
+            const templateID = 'contact_form';
+
+            // Extracting form values
+            const user_name = document.getElementById('user_name').value;
+            const topic = document.getElementById('topic').value;
+            const message = document.getElementById('message').value;
+            const user_email = document.getElementById('user_email').value;
+            const from_name = document.getElementById('from_name').value;
+            const reply_to = document.getElementById('reply_to').value;
+
+            btn.value = 'Sending...';
+
+            emailjs.send(serviceID, templateID, {
+                user_name: user_name,
+                topic: topic,
+                message: message,
+                user_email: user_email,
+                from_name: from_name,
+                reply_to: reply_to
+            })
+            .then(() => {
+                btn.value = 'Send Email';
+                alert('Sent!');
+            }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));
+            });
+        }
+    </script>
+</body>
+</html>
